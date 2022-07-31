@@ -14,7 +14,7 @@ function bindEvents(p) {
   // When receive a video streaming
   p.on('stream', function (stream) {
     let video = document.querySelector('#receiver-video')
-    video.volume = 0
+    // video.volume = 0
     video.srcObject = stream;
     video.play()
   })
@@ -44,7 +44,7 @@ function startPeer(initiator) {
 
     // Emitt video
     let emitterVideo = document.querySelector('#emitter-video')
-    emitterVideo.volume = 0
+    // emitterVideo.volume = 0
     emitterVideo.srcObject = stream;
     emitterVideo.play()
   }, function () { })
